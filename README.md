@@ -1,4 +1,6 @@
 # New Hope: Santa's Bag of Hope
+By: Ciera Workman\
+Project 6 202009-01
 
 ## Specs
 * Android 29
@@ -11,3 +13,9 @@
 * About Us page
 * Partners page
 * List of children & their stories/interests
+
+## Known Bugs
+* None currently
+
+## Squashed Bugs
+* None currently
