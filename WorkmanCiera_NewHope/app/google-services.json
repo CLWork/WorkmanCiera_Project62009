@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "275025397440",
+    "firebase_url": "https://workmanciera-newhope.firebaseio.com",
+    "project_id": "workmanciera-newhope",
+    "storage_bucket": "workmanciera-newhope.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275025397440:android:143990acab962fc666cf25",
+        "android_client_info": {
+          "package_name": "com.example.workmanciera_newhope"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275025397440-1p64sn78qa7j0i22d21lq557hn4lg7sk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.workmanciera_newhope",
+            "certificate_hash": "411f6eda9a8dcde42a263e5a2d0b20b3df80a5b9"
+          }
+        },
+        {
+          "client_id": "275025397440-19rvkqdjgustkdhbot2s46g4pa3671m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSlVMkQzvhYIXwafaKtsjF9WbWL8RQa3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275025397440-19rvkqdjgustkdhbot2s46g4pa3671m1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
