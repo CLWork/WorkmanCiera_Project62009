@@ -4,6 +4,7 @@
 
 package com.example.workmanciera_newhope.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -43,10 +44,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     public static final String TAG = "LoginFrag.Tag";
     private static final String EMAIL = "email";
     private boolean loginTapped = false;
+    private Context mContext;
     private LoginButton fbLoginBttn;
     private CallbackManager callbackManager;
     private AuthListener mListener;
     FirebaseAuth auth;
+
 
 
     public static LoginFragment newInstance() {
@@ -68,7 +71,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         callbackManager = CallbackManager.Factory.create();
-
+        mContext = context;
         if (context instanceof AuthListener) {
             mListener = (AuthListener) context;
         }
@@ -167,9 +170,25 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                     "At least 6 characters long \n" +
                     "No Spaces.");
         } else {
-            Toast.makeText(getContext(), "All fields valid.", Toast.LENGTH_SHORT).show();
+           signInUser(email, password);
+
         }
 
+    }
+
+    private void signInUser(String e, String p){
+        auth = mListener.getAuth();
+        auth.signInWithEmailAndPassword(e, p).addOnCompleteListener((Activity) mContext, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()) {
+                    Toast.makeText(getContext(), "Login Successful!", Toast.LENGTH_SHORT).show();
+                    mListener.openHome();
+                } else {
+                    Toast.makeText(getContext(), "Login Failed.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 }

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.workmanciera_newhope.R;
+import com.example.workmanciera_newhope.fragments.HomeFragment;
 import com.example.workmanciera_newhope.fragments.LoginFragment;
 import com.example.workmanciera_newhope.fragments.RegisterFragment;
 import com.example.workmanciera_newhope.helpers.AuthListener;
@@ -68,7 +69,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public void openHome(){
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frameLayout, HomeFragment.newInstance(), HomeFragment.TAG).commit();
 
+        bottomNavigation.setVisibility(View.VISIBLE);
     }
 
     public void openDonate(){

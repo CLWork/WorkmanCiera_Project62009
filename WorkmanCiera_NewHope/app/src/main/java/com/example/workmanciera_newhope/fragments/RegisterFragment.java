@@ -5,7 +5,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +22,13 @@ import androidx.fragment.app.Fragment;
 
 import com.example.workmanciera_newhope.R;
 import com.example.workmanciera_newhope.helpers.AuthListener;
+import com.example.workmanciera_newhope.helpers.Users;
 import com.example.workmanciera_newhope.helpers.Utility;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -40,6 +41,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
     private AuthListener mListener;
     private String selectedState = "";
     private Context mContext;
+    private Users newUser;
 
     public static RegisterFragment newInstance() {
 
@@ -140,16 +142,26 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
                 } else {
                     fullAddress = addressOne + ", " + selectedState + " " + zipcode;
                 }
+
+                newUser = new Users(fullName, email);
+                newUser.setAddress(fullAddress);
+
+            } else {
+
+                newUser = new Users(fullName, email);
             }
-            //Creates
-            createNewUser(email, password, fullName, fullAddress);
+
+            //Creates user in Firebase, password is only used for this reason.
+            createNewUser(password);
 
         }
 
     }
 
-    private void createNewUser(final String e, String p, final String fN, final String address){
+    private void createNewUser(final String p){
         FirebaseAuth fbAuth = mListener.getAuth();
+
+        final String e = newUser.getEmail();
 
         fbAuth.createUserWithEmailAndPassword(e, p).addOnCompleteListener((Activity) mContext, new OnCompleteListener<AuthResult>() {
             @Override
@@ -157,7 +169,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
                 if(task.isSuccessful()) {
                     Toast.makeText(mContext, "Account Creation Successful.", Toast.LENGTH_SHORT).show();
 
-                    addUserInfoToDB(e, fN, address);
+                    addUserInfoToDB();
 
                     mListener.openHome();
                 } else{
@@ -167,9 +179,15 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         });
     }
 
-    private void addUserInfoToDB(String e, String fN, String address){
-        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
-
+    //grab current user and add their profile info to database
+    private void addUserInfoToDB(){
+        FirebaseAuth fbAuth = mListener.getAuth();
+        FirebaseUser currentUser = fbAuth.getCurrentUser();
+        if(currentUser != null) {
+            String uid = currentUser.getUid();
+            DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+            mDatabase.child("Users").child(uid).setValue(newUser);
+        }
     }
 
     //populates spinner and sets listener

@@ -20,7 +20,7 @@ public class Utility {
         Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
         Matcher m = pattern.matcher(p);
 
-        return m.matches();
+        return !m.matches();
     }
 
     public static boolean isPasswordValid(String p){

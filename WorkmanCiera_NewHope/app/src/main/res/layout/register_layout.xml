@@ -75,10 +75,10 @@
 
     <Spinner
         android:id="@+id/stateSpinner"
-        android:layout_width="85dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="40dp"
         android:backgroundTint="@color/darkRed"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
         app:layout_constraintTop_toBottomOf="@+id/unitET" />
