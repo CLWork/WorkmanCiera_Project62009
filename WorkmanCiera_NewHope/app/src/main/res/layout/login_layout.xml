@@ -8,7 +8,7 @@
 
 
     <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_button"
+        android:id="@+id/fbLoginBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
         android:autofillHints=".AUTOFILL_HINT_EMAIL_ADDRESS"
+        android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
@@ -38,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:autofillHints=".AUTOFILL_HINT_PASSWORD"
+        android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -62,6 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorAccent"
         android:text="@string/register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

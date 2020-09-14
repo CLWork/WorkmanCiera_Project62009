@@ -7,8 +7,17 @@
     <string name="register">Register</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="fullName">Full Name</string>
+    <string name="next">Next</string>
+    <string name="addressLineOne">Address #1</string>
+    <string name="unitNum">Unit/Suite</string>
+    <string name="zipcode">Zipcode</string>
     <string name="contentDesc">An image of the New Hope for Kids logo.</string>
 
+    <string name="passwordReqs">1 Upper Case Letter, 1 Lower case Letter,
+        1 Symbol (@#$%^&amp;+=), at least 6 characters long and no Spaces</string>
+
+    <string name="optionalArea">Optional: For a personal thank you!</string>
     <string name="home">Home</string>
     <string name="people">People</string>
     <string name="donate">Donate</string>

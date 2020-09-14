@@ -5,10 +5,12 @@
 package com.example.workmanciera_newhope.activities;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.workmanciera_newhope.R;
 import com.example.workmanciera_newhope.fragments.LoginFragment;
+import com.example.workmanciera_newhope.fragments.RegisterFragment;
 import com.example.workmanciera_newhope.helpers.AuthListener;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         bottomNavigation = findViewById(R.id.navigationBar);
         bottomNavigation.setOnNavigationItemSelectedListener(this);
+        mAuth = FirebaseAuth.getInstance();
 
         openLogin();
     }
@@ -96,8 +99,24 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigation.setVisibility(View.GONE);
     }
 
-    public void openRegister(){
+    @Override
+    public FirebaseAuth getAuth() {
+        return mAuth;
+    }
 
+    @Override
+    public void alertUser(String message) {
+      new AlertDialog.Builder(this)
+              .setTitle("Oops")
+              .setMessage(message)
+              .setPositiveButton(android.R.string.ok, null)
+              .show();
+
+    }
+    @Override
+    public void openRegister(){
         bottomNavigation.setVisibility(View.GONE);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frameLayout, RegisterFragment.newInstance(), RegisterFragment.TAG).commit();
     }
 }
