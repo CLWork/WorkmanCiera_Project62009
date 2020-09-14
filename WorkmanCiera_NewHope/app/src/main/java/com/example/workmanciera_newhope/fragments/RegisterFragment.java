@@ -1,5 +1,6 @@
 package com.example.workmanciera_newhope.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,6 +24,12 @@ import androidx.fragment.app.Fragment;
 import com.example.workmanciera_newhope.R;
 import com.example.workmanciera_newhope.helpers.AuthListener;
 import com.example.workmanciera_newhope.helpers.Utility;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,6 +39,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
     public static final String TAG = "RegisterFrag.TAG";
     private AuthListener mListener;
     private String selectedState = "";
+    private Context mContext;
 
     public static RegisterFragment newInstance() {
 
@@ -64,6 +73,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
+        mContext = context;
         if (context instanceof AuthListener) {
             mListener = (AuthListener) context;
         }
@@ -131,11 +141,34 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
                     fullAddress = addressOne + ", " + selectedState + " " + zipcode;
                 }
             }
-
-            //TODO: Create User
-
+            //Creates
+            createNewUser(email, password, fullName, fullAddress);
 
         }
+
+    }
+
+    private void createNewUser(final String e, String p, final String fN, final String address){
+        FirebaseAuth fbAuth = mListener.getAuth();
+
+        fbAuth.createUserWithEmailAndPassword(e, p).addOnCompleteListener((Activity) mContext, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()) {
+                    Toast.makeText(mContext, "Account Creation Successful.", Toast.LENGTH_SHORT).show();
+
+                    addUserInfoToDB(e, fN, address);
+
+                    mListener.openHome();
+                } else{
+                    Toast.makeText(mContext, "Account Creation Failed.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    private void addUserInfoToDB(String e, String fN, String address){
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
     }
 
