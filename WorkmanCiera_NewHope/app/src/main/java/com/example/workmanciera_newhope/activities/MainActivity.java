@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.workmanciera_newhope.R;
+import com.example.workmanciera_newhope.fragments.AboutFragment;
 import com.example.workmanciera_newhope.fragments.HomeFragment;
 import com.example.workmanciera_newhope.fragments.LoginFragment;
 import com.example.workmanciera_newhope.fragments.RegisterFragment;
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigation.setOnNavigationItemSelectedListener(this);
         mAuth = FirebaseAuth.getInstance();
 
-        openLogin();
+        //openLogin();
+        openAbout();
     }
 
     @Override
@@ -83,7 +85,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     }
 
+    @Override
     public void openAbout(){
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frameLayout, AboutFragment.newInstance(), AboutFragment.TAG).commit();
 
     }
 

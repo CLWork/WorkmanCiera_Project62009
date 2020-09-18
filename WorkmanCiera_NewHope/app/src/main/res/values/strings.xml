@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">WorkmanCiera_NewHope</string>
     <string name="facebook_app_id">335583464458988</string>
     <string name="fb_login_protocol_scheme">fb335583464458988</string>
@@ -23,4 +23,17 @@
     <string name="donate">Donate</string>
     <string name="aboutUs">About Us</string>
     <string name="settings">Settings</string>
+
+    <string name="aboutNewHope">Since 1996, New Hope for Kids has been helping Central Florida children in need.
+        Our purpose is to bring hope, healing and happiness to children and families suffering from grief, loss or life-threatening illnesses. \n \n
+        New Hope for Kids achieves this through two programs:\n</string>
+    <string name="centerOfGrievingChildren">Center for Grieving Children</string>
+    <string name="wishForKids">Wishes For Kids</string>
+    <string name="grievingChildrenAbout"> helps children and families cope with the feelings of grief and loss after the death of a loved one.\n</string>
+    <string name="wishForKidsAbout"> grants wishes to children up to the age 19, diagnosed with a life-threatening illness.\n</string>
+    <string name="fundingAbout" tools:ignore="TypographyOther"> Funding comes primarily through charitable donations by individuals, corporations, foundations and community service organizations in Central Florida.
+        No funding is received from government agencies. New Hope for Kids is a registered 501(c)(3) organization.\n\n
+        New Hope for Kids is governed by a volunteer board of directors from the Central Florida community. David C. Joswick, serves as the Executive Director.
+        He is known in the Central Florida community as an advocate of children, focusing on the difficulties associated with grief and loss.</string>
+
 </resources>

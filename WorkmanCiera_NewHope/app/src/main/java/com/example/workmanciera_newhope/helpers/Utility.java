@@ -5,13 +5,28 @@
 package com.example.workmanciera_newhope.helpers;
 
 
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.text.TextUtils;
 
+
+import com.example.workmanciera_newhope.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Utility {
+
+    //convert resource into bitmap
+    public static Bitmap loadSmallLogo(Resources res) {
+        return BitmapFactory.decodeResource(res, R.drawable.new_hope_tree_logo);
+    }
+
+    //convert resource into bitmap
+    public static Bitmap loadLargeLogo(Resources res) {
+        return BitmapFactory.decodeResource(res, R.drawable.new_hope_logo);
+    }
 
     public static boolean isPasswordStrongEnough(String p) {
         final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";

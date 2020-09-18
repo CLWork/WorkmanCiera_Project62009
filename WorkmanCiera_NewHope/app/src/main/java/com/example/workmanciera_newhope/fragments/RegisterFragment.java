@@ -2,8 +2,6 @@ package com.example.workmanciera_newhope.fragments;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,7 +61,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         super.onActivityCreated(savedInstanceState);
         assert getActivity() != null;
         ImageView logoIV = getActivity().findViewById(R.id.treeLogoIV);
-        logoIV.setImageBitmap(loadLogo());
+        logoIV.setImageBitmap(Utility.loadSmallLogo(getResources()));
 
         Button nextBttn = getActivity().findViewById(R.id.nextButton);
         nextBttn.setOnClickListener(this);
@@ -79,11 +77,6 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         if (context instanceof AuthListener) {
             mListener = (AuthListener) context;
         }
-    }
-
-    //convert resource into bitmap
-    private Bitmap loadLogo() {
-        return BitmapFactory.decodeResource(getResources(), R.drawable.new_hope_tree_logo);
     }
 
     @Override

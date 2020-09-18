@@ -38,6 +38,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Collections;
+import java.util.Objects;
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
@@ -176,7 +177,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     }
 
-    private void signInUser(String e, String p){
+    private void signInUser(String e, final String p){
         auth = mListener.getAuth();
         auth.signInWithEmailAndPassword(e, p).addOnCompleteListener((Activity) mContext, new OnCompleteListener<AuthResult>() {
             @Override
@@ -186,6 +187,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                     mListener.openHome();
                 } else {
                     Toast.makeText(getContext(), "Login Failed.", Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, Objects.requireNonNull(task.getException()).toString());
                 }
             }
         });

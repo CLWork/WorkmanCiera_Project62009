@@ -7,6 +7,7 @@ public interface AuthListener {
     void openHome();
     void openLogin();
     void openRegister();
+    void openAbout();
     void alertUser(String message);
     FirebaseAuth getAuth();
 

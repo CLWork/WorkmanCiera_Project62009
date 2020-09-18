@@ -74,7 +74,7 @@
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="0dp"
-        android:layout_height="136dp"
+        android:layout_height="160dp"
         android:contentDescription="@string/contentDesc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
