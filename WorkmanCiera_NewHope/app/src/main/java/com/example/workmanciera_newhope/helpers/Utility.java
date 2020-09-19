@@ -28,6 +28,11 @@ public class Utility {
         return BitmapFactory.decodeResource(res, R.drawable.new_hope_logo);
     }
 
+    //convert resource into bitmap
+    public static Bitmap loadKidsArtwork(Resources res) {
+        return BitmapFactory.decodeResource(res, R.drawable.kidsartwork);
+    }
+
     public static boolean isPasswordStrongEnough(String p) {
         final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";
         p = p.trim();

@@ -24,7 +24,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.workmanciera_newhope.R;
-import com.example.workmanciera_newhope.helpers.AuthListener;
+import com.example.workmanciera_newhope.helpers.FragmentListener;
 import com.example.workmanciera_newhope.helpers.Utility;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -35,7 +35,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Collections;
 import java.util.Objects;
@@ -48,7 +47,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     private Context mContext;
     private LoginButton fbLoginBttn;
     private CallbackManager callbackManager;
-    private AuthListener mListener;
+    private FragmentListener mListener;
     FirebaseAuth auth;
 
 
@@ -73,8 +72,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         super.onAttach(context);
         callbackManager = CallbackManager.Factory.create();
         mContext = context;
-        if (context instanceof AuthListener) {
-            mListener = (AuthListener) context;
+        if (context instanceof FragmentListener) {
+            mListener = (FragmentListener) context;
         }
     }
 

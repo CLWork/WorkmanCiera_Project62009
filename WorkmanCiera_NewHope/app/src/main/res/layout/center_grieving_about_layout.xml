@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
 
+    <ImageView
+        android:id="@+id/artworkImgView"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artworkImgView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/missionLabel"
+                android:text="@string/cFGKMissionStatementLabel"
+                style="@style/headerTextStyle" />
+
+            <TextView
+                android:id="@+id/missionStatement"
+                android:text="@string/cFGKMissionStatement"
+                style="@style/bodyTextStyle" />
+
+            <TextView
+                android:id="@+id/beliefLabel"
+                style="@style/headerTextStyle"
+                android:text="@string/cFGKBeliefLabel" />
+
+            <TextView
+                android:id="@+id/beliefDesc"
+                android:text="@string/cFGKBeliefDesc"
+                style="@style/bodyTextStyle" />
+
+            <TextView
+                android:id="@+id/beliefPoint1"
+                style="@style/bodyTextStyle"
+                android:text="@string/cfGKPoint1" />
+
+            <TextView
+                android:id="@+id/beliefPoint2"
+                style="@style/bodyTextStyle"
+                android:text="@string/cfGKPoint2" />
+
+            <TextView
+                android:id="@+id/beliefPoint3"
+                style="@style/bodyTextStyle"
+                android:text="@string/cfGKPoint3" />
+
+            <TextView
+                android:id="@+id/beliefPoint4"
+                style="@style/bodyTextStyle"
+                android:text="@string/cfGKPoint4" />
+
+            <TextView
+                android:id="@+id/programLabel"
+                style="@style/headerTextStyle"
+                android:text="@string/cFGKProgramLabel" />
+
+            <TextView
+                android:id="@+id/littleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cFGKProgram1Label" />
+
+            <TextView
+                android:id="@+id/littleDesc"
+                style="@style/bodyTextStyle"
+                android:text="@string/cFGKProgram1" />
+
+            <TextView
+                android:id="@+id/middleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cFGKProgram2Label" />
+
+            <TextView
+                android:id="@+id/middleDesc"
+                style="@style/bodyTextStyle"
+                android:text="@string/cFGKProgram2" />
+
+            <TextView
+                android:id="@+id/teenLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cFGKProgram3Label" />
+
+            <TextView
+                android:id="@+id/teenDesc"
+                style="@style/bodyTextStyle"
+                android:text="@string/cFGKProgram3" />
+
+            <TextView
+                android:id="@+id/parentLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cFGKProgram4Label" />
+
+            <TextView
+                android:id="@+id/parentDesc"
+                style="@style/bodyTextStyle"
+                android:text="@string/cFGKProgram4" />
+
+            <TextView
+                android:id="@+id/staffLabel"
+                style="@style/headerTextStyle"
+                android:text="@string/cFGKStaffLabel" />
+
+            <TextView
+                android:id="@+id/staffDesc"
+                style="@style/bodyTextStyle"
+                android:text="@string/cFGKStaffDesc" />
+
+            <TextView
+                android:id="@+id/volunteerLabel"
+                style="@style/headerTextStyle"
+                android:text="@string/cFGKVolunteerLabel" />
+
+            <TextView
+                android:id="@+id/volunteerDesc"
+                style="@style/bodyTextStyle"
+                android:text="@string/cFGKVolunteerDesc" />
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

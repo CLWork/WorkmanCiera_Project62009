@@ -1,4 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    //GENERAL APP STRINGS\\
     <string name="app_name">WorkmanCiera_NewHope</string>
     <string name="facebook_app_id">335583464458988</string>
     <string name="fb_login_protocol_scheme">fb335583464458988</string>
@@ -24,16 +26,82 @@
     <string name="aboutUs">About Us</string>
     <string name="settings">Settings</string>
 
+    //GENERAL ABOUT INFO\\
     <string name="aboutNewHope">Since 1996, New Hope for Kids has been helping Central Florida children in need.
         Our purpose is to bring hope, healing and happiness to children and families suffering from grief, loss or life-threatening illnesses. \n \n
-        New Hope for Kids achieves this through two programs:\n</string>
+        New Hope for Kids achieves this through two programs:</string>
     <string name="centerOfGrievingChildren">Center for Grieving Children</string>
     <string name="wishForKids">Wishes For Kids</string>
-    <string name="grievingChildrenAbout"> helps children and families cope with the feelings of grief and loss after the death of a loved one.\n</string>
-    <string name="wishForKidsAbout"> grants wishes to children up to the age 19, diagnosed with a life-threatening illness.\n</string>
+    <string name="grievingChildrenAbout">The center helps children and families cope with the feelings of grief and loss after the death of a loved one.</string>
+    <string name="wishForKidsAbout"> Wishes for Kids grants wishes to children up to the age 19, diagnosed with a life-threatening illness.\n</string>
     <string name="fundingAbout" tools:ignore="TypographyOther"> Funding comes primarily through charitable donations by individuals, corporations, foundations and community service organizations in Central Florida.
         No funding is received from government agencies. New Hope for Kids is a registered 501(c)(3) organization.\n\n
         New Hope for Kids is governed by a volunteer board of directors from the Central Florida community. David C. Joswick, serves as the Executive Director.
         He is known in the Central Florida community as an advocate of children, focusing on the difficulties associated with grief and loss.</string>
+
+    //CENTER FOR GRIEVING CHILDREN INFO\\
+    <string name="cFGKMissionStatementLabel">Our Mission</string>
+    <string name="cFGKMissionStatement">New Hope for Kids’ Grief Support Program provides a safe and supportive environment where children grieving the death of a loved one can share their experience with others facing the same feelings of loss.
+        Offering a unique opportunity for children to begin and continue their grief journey, New Hope for Kids strives to provide our families with hope, healing and renewal. \n
+        \n We also extend support for the entire family through parent support groups, community awareness projects,
+        information and referral services, as well as family events and summer camps throughout the year.\n</string>
+
+    <string name="cFGKBeliefLabel">Principal Beliefs</string>
+    <string name="cFGKBeliefDesc">New Hope for Kids believes every child deserves the opportunity to grieve in a supportive and understanding environment.
+        Some things to keep in mind when dealing with grief:\n</string>
+    <string name="cfGKPoint1">Grief is a natural reaction to the loss of a loved one for children, AND adults.\n</string>
+    <string name="cfGKPoint2">Within each individual is the natural capacity to heal.\n</string>
+    <string name="cfGKPoint3">The duration and intensity of grief are unique for each individual.\n</string>
+    <string name="cfGKPoint4">Caring and acceptance assist in the healing process.\n</string>
+
+    <string name="cFGKProgramLabel">Programs \n</string>
+    <string name="cFGKProgram1Label">Littles Groups</string>
+    <string name="cFGKProgram2Label">Middles Groups</string>
+    <string name="cFGKProgram3Label">Teen Groups</string>
+    <string name="cFGKProgram4Label">Parent Groups</string>
+    <string name="cFGKProgram1">Children ages 3 to 6 who have had a parent, sibling or other significant person die. This is where they come to share their feelings through play.\n</string>
+    <string name="cFGKProgram2">Children ages 7 to 12 give and receive support as they share feelings about the death of someone important in their lives.\n</string>
+    <string name="cFGKProgram3">Teens ages 13 to 18 show their support for each other as they share their experiences regarding the death of a parent, sibling, best friend or other significant person in their life.\n</string>
+    <string name="cFGKProgram4">While each children’s group is meeting, their surviving parent(s) or caregivers meet in a separate group with a licensed counselor.
+        This is an opportunity to share the concerns and fears families and friends are facing at home, and to support one another.\n</string>
+
+    <string name="cFGKStaffLabel">Staff</string>
+    <string name="cFGKStaffDesc">The Center for Grieving Children is comprised of a small, core staff of professionals with advanced degrees in counseling and social work, as well as experience in bereavement counseling.\n</string>
+
+    <string name="cFGKVolunteerLabel">Volunteers</string>
+    <string name="cFGKVolunteerDesc">Extensively trained Grief Facilitators are the heart of this program. They are trained to facilitate groups, make families feel at home, and generally support the work of the program. Grief Facilitators come from all walks of life and contribute, on average, 6 hours a month to New Hope for Kids.
+        If you are interested in becoming a Grief Facilitator or volunteer in another capacity, please call 407-331-3059 x15.\n</string>
+
+    //WISHES FOR KIDS INFO\\
+    <string name="wFKAbout">In 1985 the Children’s Wish Program was founded as a not-for-profit charity and is the longest running wish program in Central Florida.
+        Children’s Wish was created to provide hope and a once in a lifetime experience to children fighting a life-threatening illness. /n
+        New Hope for Kids Wishes for Kids Program continues the legacy by providing wishes for children that other organizations, in the Central Florida area, are not able to serve.
+        Wishes for Kids grants wishes to children with life-threatening illnesses who have not yet reached their 19th birthday nor had a wish previously granted.
+        A life-threatening illness is defined by New Hope for Kids as any illness which will in all likelihood shorten the child’s full life expectancy./n
+        Although the Wishes for Kids Program is not able to cure the life-threatening illnesses of their wish children, it is proud to grant wishes and go beyond the wish – offering support, resources and community for these special families.
+        New Hope for Kids Wishes for Kids Program uses it’s resources to lighten the burden for the wish child and their families strives to improve the quality of time remaining in the child’s life.</string>
+
+
+    <string name="wFKUniqueLabel">New Hope for Kids Wish program is unique for the following reasons:</string>
+    <string name="wFKPoint1Label">FOCUS</string>
+    <string name="wFKPoint2Label">FOLLOWUP</string>
+    <string name="wFKPoint3Label">FLEXIBILITY</string>
+    <string name="wFKPoint1">Unlike other wish-granting organizations, New Hope for Kids Wish Program is not affiliated with a national organization, but is an independent, locally based charity that focuses on Central Florida children.
+        Occasionally a wish is granted out of state, but 90% or more are granted right here. T
+        hat means the money that is raised by Central Florida community members goes right back into our economy.
+        New Hope for Kids does not receive funds from State or Federal reimbursement and is not a United Way agency.</string>
+    <string name="wFKPoint2">Because most of our wish recipients live in the vicinity, New Hope for Kids is able to provide additional services and support beyond the wish itself.
+        We call ourselves the New Hope Kids Family, because we join together for regular activities to have fun, share resources and provide emotional support.
+        These activities are designed to prevent the isolation and sense of hopelessness that often accompanies grief and illness.
+        Families help each other while forming lasting relationships.</string>
+    <string name="wFKPoint3">New Hope for Kids is able to meet a wide spectrum of needs through wishes and community resources.
+        We follow guidelines, but consider each wish on a case-by-case basis to ensure that the child’s best interests are being met.</string>
+    <string name="wFKEndStatement">When New Hope for Kids grants a wish to a child, it can last a lifetime!
+        We take the wish one step further through attention to special needs, resource information, the New Hope for Kids “family” and nine annual enjoyable events.</string>
+
+    <string name="wFKPartner">Our Wish Program needs your support! Consider becoming a Wish Partner:</string>
+    <string name="wFKPartnerDesc">Organizations, corporations and individuals are encouraged to sponsor a wish for a child.
+        Anyone can be a part through fundraising, donations, or hosting a wish.
+        This makes the event more special for the child and family, but also allows everyone involved the opportunity to enjoy making a child’s wish come true!</string>
 
 </resources>

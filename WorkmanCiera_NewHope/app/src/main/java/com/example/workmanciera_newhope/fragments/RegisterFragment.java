@@ -19,7 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.workmanciera_newhope.R;
-import com.example.workmanciera_newhope.helpers.AuthListener;
+import com.example.workmanciera_newhope.helpers.FragmentListener;
 import com.example.workmanciera_newhope.helpers.Users;
 import com.example.workmanciera_newhope.helpers.Utility;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -36,7 +36,7 @@ import java.util.Arrays;
 public class RegisterFragment extends Fragment implements View.OnClickListener {
 
     public static final String TAG = "RegisterFrag.TAG";
-    private AuthListener mListener;
+    private FragmentListener mListener;
     private String selectedState = "";
     private Context mContext;
     private Users newUser;
@@ -74,8 +74,8 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         mContext = context;
-        if (context instanceof AuthListener) {
-            mListener = (AuthListener) context;
+        if (context instanceof FragmentListener) {
+            mListener = (FragmentListener) context;
         }
     }
 

@@ -34,45 +34,51 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/aboutNH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
                 android:text="@string/aboutNewHope" />
 
-            <TextView
-                android:id="@+id/cFGCTitle"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/centerBttn"
+                style="@android:style/Widget.Material.Button.Borderless.Small"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/centerOfGrievingChildren"
-                android:textStyle="bold" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/cFGCAbout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
                 android:text="@string/grievingChildrenAbout" />
 
-            <TextView
-                android:id="@+id/wFkTtitle"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/wishBttn"
+                style="@android:style/Widget.Material.Button.Borderless.Small"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/wishForKids"
-                android:textStyle="bold" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/wFkAbout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
                 android:text="@string/wishForKidsAbout" />
 
             <TextView
                 android:id="@+id/fundingAbout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
                 android:text="@string/fundingAbout" />
-
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

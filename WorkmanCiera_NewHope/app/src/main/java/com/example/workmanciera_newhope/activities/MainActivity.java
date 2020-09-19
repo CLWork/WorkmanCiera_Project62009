@@ -9,13 +9,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.workmanciera_newhope.R;
+import com.example.workmanciera_newhope.fragments.AboutCFGKFragment;
 import com.example.workmanciera_newhope.fragments.AboutFragment;
 import com.example.workmanciera_newhope.fragments.HomeFragment;
 import com.example.workmanciera_newhope.fragments.LoginFragment;
 import com.example.workmanciera_newhope.fragments.RegisterFragment;
-import com.example.workmanciera_newhope.helpers.AuthListener;
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
+import com.example.workmanciera_newhope.helpers.FragmentListener;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -24,7 +23,7 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, AuthListener {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, FragmentListener {
 
     BottomNavigationView bottomNavigation;
     FirebaseAuth mAuth;
@@ -39,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mAuth = FirebaseAuth.getInstance();
 
         //openLogin();
-        openAbout();
+       // openAbout();
+        openCFGAbout();
     }
 
     @Override
@@ -106,6 +106,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 .replace(R.id.frameLayout, LoginFragment.newInstance(), LoginFragment.TAG).commit();
 
         bottomNavigation.setVisibility(View.GONE);
+    }
+
+    public void openCFGAbout(){
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frameLayout, AboutCFGKFragment.newInstance(), AboutCFGKFragment.TAG).commit();
+
+    }
+
+    public void openWFKAbout(){
+
     }
 
     @Override
