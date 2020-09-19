@@ -7,10 +7,12 @@ package com.example.workmanciera_newhope.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.workmanciera_newhope.R;
 import com.example.workmanciera_newhope.fragments.AboutCFGKFragment;
 import com.example.workmanciera_newhope.fragments.AboutFragment;
+import com.example.workmanciera_newhope.fragments.AboutWFKFragment;
 import com.example.workmanciera_newhope.fragments.HomeFragment;
 import com.example.workmanciera_newhope.fragments.LoginFragment;
 import com.example.workmanciera_newhope.fragments.RegisterFragment;
@@ -38,8 +40,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mAuth = FirebaseAuth.getInstance();
 
         //openLogin();
-       // openAbout();
-        openCFGAbout();
+        openHome();
     }
 
     @Override
@@ -108,14 +109,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigation.setVisibility(View.GONE);
     }
 
+    @Override
     public void openCFGAbout(){
-        getSupportFragmentManager().beginTransaction()
+        getSupportFragmentManager().beginTransaction().addToBackStack(AboutCFGKFragment.TAG)
                 .replace(R.id.frameLayout, AboutCFGKFragment.newInstance(), AboutCFGKFragment.TAG).commit();
 
     }
 
+    @Override
     public void openWFKAbout(){
-
+        getSupportFragmentManager().beginTransaction().addToBackStack(AboutWFKFragment.TAG)
+                .replace(R.id.frameLayout, AboutWFKFragment.newInstance(), AboutWFKFragment.TAG).commit();
     }
 
     @Override
@@ -137,5 +141,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigation.setVisibility(View.GONE);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frameLayout, RegisterFragment.newInstance(), RegisterFragment.TAG).commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
     }
 }

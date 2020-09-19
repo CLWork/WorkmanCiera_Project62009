@@ -8,8 +8,14 @@ package com.example.workmanciera_newhope.helpers;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.style.BulletSpan;
 
+
+import androidx.annotation.RequiresApi;
 
 import com.example.workmanciera_newhope.R;
 
@@ -31,6 +37,25 @@ public class Utility {
     //convert resource into bitmap
     public static Bitmap loadKidsArtwork(Resources res) {
         return BitmapFactory.decodeResource(res, R.drawable.kidsartwork);
+    }
+
+    //convert resource into bitmap
+    public static Bitmap loadWishDandelion(Resources res) {
+        return BitmapFactory.decodeResource(res, R.drawable.dandelion_girl);
+    }
+
+    //convert resource into bitmap
+    public static Bitmap loadInfographic(Resources res) {
+        return BitmapFactory.decodeResource(res, R.drawable.bag_of_hope_desc);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.P)
+    public static SpannableString setBulletPoint(String s, Resources res){
+        SpannableString string = new SpannableString(s);
+        string.setSpan(new BulletSpan(40, res.getColor(R.color.colorAccent), 8), 0, 0, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        return string;
+
     }
 
     public static boolean isPasswordStrongEnough(String p) {

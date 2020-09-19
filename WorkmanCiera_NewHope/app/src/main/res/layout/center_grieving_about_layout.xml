@@ -75,8 +75,7 @@
 
             <TextView
                 android:id="@+id/littleLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/miniSubHeaderStyle"
                 android:text="@string/cFGKProgram1Label" />
 
             <TextView
@@ -86,8 +85,7 @@
 
             <TextView
                 android:id="@+id/middleLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/miniSubHeaderStyle"
                 android:text="@string/cFGKProgram2Label" />
 
             <TextView
@@ -97,8 +95,7 @@
 
             <TextView
                 android:id="@+id/teenLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/miniSubHeaderStyle"
                 android:text="@string/cFGKProgram3Label" />
 
             <TextView
@@ -108,9 +105,8 @@
 
             <TextView
                 android:id="@+id/parentLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cFGKProgram4Label" />
+                android:text="@string/cFGKProgram4Label"
+                style="@style/miniSubHeaderStyle" />
 
             <TextView
                 android:id="@+id/parentDesc"

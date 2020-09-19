@@ -1,5 +1,6 @@
 package com.example.workmanciera_newhope.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -13,11 +14,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.workmanciera_newhope.R;
+import com.example.workmanciera_newhope.helpers.FragmentListener;
 import com.example.workmanciera_newhope.helpers.Utility;
 
-public class AboutFragment extends Fragment {
+public class AboutFragment extends Fragment implements View.OnClickListener {
 
     public static final String TAG = "AboutFrag.TAG";
+    private FragmentListener mListener;
 
     public static AboutFragment newInstance() {
 
@@ -41,8 +44,30 @@ public class AboutFragment extends Fragment {
         ImageView logo = getActivity().findViewById(R.id.imageView);
         logo.setImageBitmap(Utility.loadLargeLogo(getResources()));
 
+        TextView centerTV = getActivity().findViewById(R.id.cFGKLinkHeader);
+        TextView wishTV = getActivity().findViewById(R.id.wFkLinkHeader);
+        centerTV.setOnClickListener(this);
+        wishTV.setOnClickListener(this);
 
-        //TODO: Fix textview cut off text problem
+    }
 
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof FragmentListener) {
+            mListener = (FragmentListener) context;
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.cFGKLinkHeader:
+                mListener.openCFGAbout();
+                break;
+            case R.id.wFkLinkHeader:
+                mListener.openWFKAbout();
+                break;
+        }
     }
 }

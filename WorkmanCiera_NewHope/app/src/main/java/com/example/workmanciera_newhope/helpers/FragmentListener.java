@@ -8,6 +8,8 @@ public interface FragmentListener {
     void openLogin();
     void openRegister();
     void openAbout();
+    void openCFGAbout();
+    void openWFKAbout();
     void alertUser(String message);
     FirebaseAuth getAuth();
 

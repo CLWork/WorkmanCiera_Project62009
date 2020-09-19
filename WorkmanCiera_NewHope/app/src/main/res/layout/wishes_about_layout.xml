@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/dandelionImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wish_dandelion" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dandelionImgView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/aboutWishTV"
+                style="@style/bodyTextStyle"
+                android:text="@string/wFKAbout" />
+
+            <TextView
+                android:id="@+id/reasonLeadinTV"
+                style="@style/miniSubHeaderStyle"
+                android:text="@string/wFKUniqueLabel" />
+
+            <TextView
+                android:id="@+id/focusLabel"
+                style="@style/headerTextStyle"
+                android:text="@string/wFKPoint1Label" />
+
+            <TextView
+                android:id="@+id/focusDescTV"
+                style="@style/bodyTextStyle"
+                android:text="@string/wFKPoint1" />
+
+            <TextView
+                android:id="@+id/followUpLabel"
+                style="@style/headerTextStyle"
+                android:text="@string/wFKPoint2Label" />
+
+            <TextView
+                android:id="@+id/followupDesc"
+                style="@style/bodyTextStyle"
+                android:text="@string/wFKPoint2" />
+
+            <TextView
+                android:id="@+id/flexLabel"
+                style="@style/headerTextStyle"
+                android:text="@string/wFKPoint3Label" />
+
+            <TextView
+                android:id="@+id/flexDescTV"
+                style="@style/bodyTextStyle"
+                android:text="@string/wFKPoint3" />
+
+            <TextView
+                android:id="@+id/wishEndStateTV"
+                style="@style/bodyTextStyle"
+                android:text="@string/wFKEndStatement" />
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

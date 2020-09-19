@@ -35,49 +35,39 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/aboutNH"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="@string/aboutNewHope" />
+                android:id="@+id/aboutUSLabel"
+                style="@style/headerTextStyle"
+                android:text="@string/aboutUs" />
 
-            <Button
-                android:id="@+id/centerBttn"
-                style="@android:style/Widget.Material.Button.Borderless.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/centerOfGrievingChildren"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="12sp" />
+            <TextView
+            android:id="@+id/aboutNH"
+            style="@style/bodyTextStyle"
+            android:text="@string/aboutNewHope" />
+
+            <TextView
+                android:id="@+id/cFGKLinkHeader"
+                style="@style/headerTextStyle"
+                android:text="@string/centerOfGrievingChildren" />
+
 
             <TextView
                 android:id="@+id/cFGCAbout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                style="@style/bodyTextStyle"
                 android:text="@string/grievingChildrenAbout" />
 
-            <Button
-                android:id="@+id/wishBttn"
-                style="@android:style/Widget.Material.Button.Borderless.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wishForKids"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/wFkLinkHeader"
+                style="@style/headerTextStyle"
+                android:text="@string/wishForKids" />
 
             <TextView
                 android:id="@+id/wFkAbout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                style="@style/bodyTextStyle"
                 android:text="@string/wishForKidsAbout" />
 
             <TextView
                 android:id="@+id/fundingAbout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                style="@style/bodyTextStyle"
                 android:text="@string/fundingAbout" />
 
         </LinearLayout>

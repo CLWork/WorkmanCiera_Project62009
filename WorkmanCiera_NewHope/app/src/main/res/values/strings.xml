@@ -15,6 +15,7 @@
     <string name="unitNum">Unit/Suite</string>
     <string name="zipcode">Zipcode</string>
     <string name="contentDesc">An image of the New Hope for Kids logo.</string>
+    <string name="homeContentDesc">An image of santa\'s sack with holiday drive description.</string>
 
     <string name="passwordReqs">1 Upper Case Letter, 1 Lower case Letter,
         1 Symbol (@#$%^&amp;+=), at least 6 characters long and no Spaces</string>
@@ -26,13 +27,25 @@
     <string name="aboutUs">About Us</string>
     <string name="settings">Settings</string>
 
+    //HOME SCREEN TEXT\\
+    <string name="bagOfHopeHomeScreen">As the holidays approach, New Hope for Kids begins the important task of filling Santa’s <b><font color='#EE0000'>‘BAG OF HOPE’</font></b> with gifts for the kids.
+        New Hope for Kids’ goal each holiday season is to help provide gifts to the children and families in our grief and wish programs. In addition to the struggles caused by the economy, many of our families are also dealing with financial burdens caused by the death of their wage earner or because of medical expenses due to illness.
+        Please help us make their holiday a memorable one!\n\n
+        In spite of the current pandemic, Santa is prepared to put on his mask, to gather his elves, and to load up his sleigh to deliver joy this Holiday Season, BUT… he needs more helpers.
+        With the support of our generous community, Santa’s bag was filled with gifts for over 500 kids last year and anticipate supporting over 500 again this holiday season.\n\n
+        Please join New Hope for Kids in spreading much needed hope and cheer to our deserving children and families by helping fill Santa’s <b><font color='#EE0000'>‘BAG OF HOPE’</font></b>.\n\n
+        <b>Have you ever thought about having a gift drive for New Hope for Kids with a group of friends or at your place of work?</b>
+        It can be a fun way to celebrate the season and help bring joy to the kids in our grief and wish programs!\n\n
+        For Santa to get gifts to our families in time for the Holidays, we would like to have all items by <b><font color='#EE0000'>December 6th</font></b>. Gifts and gift cards can be personally dropped off or ordered online and shipped to New Hope for Kids.
+        We prefer to let parents and caregivers wrap their children’s gifts, so please bring your donations unwrapped!\n\n
+        <b>Electronic delivery of gift cards can be sent to rhonda@newhopeforkids.org</b></string>
+
     //GENERAL ABOUT INFO\\
     <string name="aboutNewHope">Since 1996, New Hope for Kids has been helping Central Florida children in need.
-        Our purpose is to bring hope, healing and happiness to children and families suffering from grief, loss or life-threatening illnesses. \n \n
-        New Hope for Kids achieves this through two programs:</string>
-    <string name="centerOfGrievingChildren">Center for Grieving Children</string>
-    <string name="wishForKids">Wishes For Kids</string>
-    <string name="grievingChildrenAbout">The center helps children and families cope with the feelings of grief and loss after the death of a loved one.</string>
+        Our purpose is to bring hope, healing and happiness to children and families suffering from grief, loss or life-threatening illnesses.\n\nNew Hope for Kids achieves this through two programs:\n</string>
+    <string name="centerOfGrievingChildren"><u>Center for Grieving Children</u></string>
+    <string name="wishForKids"><u>Wishes For Kids</u></string>
+    <string name="grievingChildrenAbout">The center helps children and families cope with the feelings of grief and loss after the death of a loved one.\n</string>
     <string name="wishForKidsAbout"> Wishes for Kids grants wishes to children up to the age 19, diagnosed with a life-threatening illness.\n</string>
     <string name="fundingAbout" tools:ignore="TypographyOther"> Funding comes primarily through charitable donations by individuals, corporations, foundations and community service organizations in Central Florida.
         No funding is received from government agencies. New Hope for Kids is a registered 501(c)(3) organization.\n\n
@@ -74,34 +87,29 @@
 
     //WISHES FOR KIDS INFO\\
     <string name="wFKAbout">In 1985 the Children’s Wish Program was founded as a not-for-profit charity and is the longest running wish program in Central Florida.
-        Children’s Wish was created to provide hope and a once in a lifetime experience to children fighting a life-threatening illness. /n
+        Children’s Wish was created to provide hope and a once in a lifetime experience to children fighting a life-threatening illness.\n\n
         New Hope for Kids Wishes for Kids Program continues the legacy by providing wishes for children that other organizations, in the Central Florida area, are not able to serve.
         Wishes for Kids grants wishes to children with life-threatening illnesses who have not yet reached their 19th birthday nor had a wish previously granted.
-        A life-threatening illness is defined by New Hope for Kids as any illness which will in all likelihood shorten the child’s full life expectancy./n
+        A life-threatening illness is defined by New Hope for Kids as any illness which will in all likelihood shorten the child’s full life expectancy.\n\n
         Although the Wishes for Kids Program is not able to cure the life-threatening illnesses of their wish children, it is proud to grant wishes and go beyond the wish – offering support, resources and community for these special families.
-        New Hope for Kids Wishes for Kids Program uses it’s resources to lighten the burden for the wish child and their families strives to improve the quality of time remaining in the child’s life.</string>
+        New Hope for Kids Wishes for Kids Program uses it’s resources to lighten the burden for the wish child and their families strives to improve the quality of time remaining in the child’s life.\n</string>
 
 
-    <string name="wFKUniqueLabel">New Hope for Kids Wish program is unique for the following reasons:</string>
+    <string name="wFKUniqueLabel">New Hope for Kids Wish program is unique for the following reasons:\n</string>
     <string name="wFKPoint1Label">FOCUS</string>
     <string name="wFKPoint2Label">FOLLOWUP</string>
     <string name="wFKPoint3Label">FLEXIBILITY</string>
     <string name="wFKPoint1">Unlike other wish-granting organizations, New Hope for Kids Wish Program is not affiliated with a national organization, but is an independent, locally based charity that focuses on Central Florida children.
-        Occasionally a wish is granted out of state, but 90% or more are granted right here. T
-        hat means the money that is raised by Central Florida community members goes right back into our economy.
-        New Hope for Kids does not receive funds from State or Federal reimbursement and is not a United Way agency.</string>
+        Occasionally a wish is granted out of state, but 90% or more are granted right here.
+        That means the money that is raised by Central Florida community members goes right back into our economy.
+        New Hope for Kids does not receive funds from State or Federal reimbursement and is not a United Way agency.\n</string>
     <string name="wFKPoint2">Because most of our wish recipients live in the vicinity, New Hope for Kids is able to provide additional services and support beyond the wish itself.
         We call ourselves the New Hope Kids Family, because we join together for regular activities to have fun, share resources and provide emotional support.
         These activities are designed to prevent the isolation and sense of hopelessness that often accompanies grief and illness.
-        Families help each other while forming lasting relationships.</string>
+        Families help each other while forming lasting relationships.\n</string>
     <string name="wFKPoint3">New Hope for Kids is able to meet a wide spectrum of needs through wishes and community resources.
-        We follow guidelines, but consider each wish on a case-by-case basis to ensure that the child’s best interests are being met.</string>
+        We follow guidelines, but consider each wish on a case-by-case basis to ensure that the child’s best interests are being met.\n</string>
     <string name="wFKEndStatement">When New Hope for Kids grants a wish to a child, it can last a lifetime!
         We take the wish one step further through attention to special needs, resource information, the New Hope for Kids “family” and nine annual enjoyable events.</string>
-
-    <string name="wFKPartner">Our Wish Program needs your support! Consider becoming a Wish Partner:</string>
-    <string name="wFKPartnerDesc">Organizations, corporations and individuals are encouraged to sponsor a wish for a child.
-        Anyone can be a part through fundraising, donations, or hosting a wish.
-        This makes the event more special for the child and family, but also allows everyone involved the opportunity to enjoy making a child’s wish come true!</string>
 
 </resources>
