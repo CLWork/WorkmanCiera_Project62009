@@ -61,7 +61,7 @@
                 android:text="@string/wishForKids" />
 
             <TextView
-                android:id="@+id/wFkAbout"
+                android:id="@+id/aboutWFK"
                 style="@style/bodyTextStyle"
                 android:text="@string/wishForKidsAbout" />
 
@@ -69,6 +69,10 @@
                 android:id="@+id/fundingAbout"
                 style="@style/bodyTextStyle"
                 android:text="@string/fundingAbout" />
+            <TextView
+                android:id="@+id/sponsorTV"
+                style="@style/bodyTextStyle"
+                android:text="@string/sponsorLink" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

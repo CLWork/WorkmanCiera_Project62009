@@ -5,4 +5,7 @@
     <color name="colorAccent">#D33943</color>
     <color name="bgColor">#F5F5F5</color>
     <color name="darkRed">#621622</color>
+    <color name="amazonYellow">#ff9900</color>
+    <color name="walmartBlue">#004c91</color>
+    <color name="targetRed">#E80018</color>
 </resources>

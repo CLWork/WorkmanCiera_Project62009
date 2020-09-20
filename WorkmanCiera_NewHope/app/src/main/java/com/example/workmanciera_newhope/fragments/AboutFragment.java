@@ -2,7 +2,6 @@ package com.example.workmanciera_newhope.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +67,10 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
             case R.id.wFkLinkHeader:
                 mListener.openWFKAbout();
                 break;
+            case R.id.sponsorTV:
+                mListener.openSponsors();
+                break;
+
         }
     }
 }

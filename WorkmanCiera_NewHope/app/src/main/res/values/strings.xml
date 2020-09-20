@@ -16,6 +16,15 @@
     <string name="zipcode">Zipcode</string>
     <string name="contentDesc">An image of the New Hope for Kids logo.</string>
     <string name="homeContentDesc">An image of santa\'s sack with holiday drive description.</string>
+    <string name="sponsorContentDesc">Image of sponsor logos.</string>
+    <string name="websiteButtonLabel">Website</string>
+    <string name="amazonWishList">Amazon Wishlist</string>
+    <string name="walmartWishList">Walmart Wishlist</string>
+    <string name="targetWishList">Target Wishlist</string>
+    <string name="newHopeBttn">New Hope Website</string>
+    <string name="donateToNewHope">Donate To New Hope</string>
+    <string name="fillBagHeader">Fill Santa\'s Bag of Hope!</string>
+    <string name="santaBagContentDesc">A red bag full of gifts.</string>
 
     <string name="passwordReqs">1 Upper Case Letter, 1 Lower case Letter,
         1 Symbol (@#$%^&amp;+=), at least 6 characters long and no Spaces</string>
@@ -50,7 +59,8 @@
     <string name="fundingAbout" tools:ignore="TypographyOther"> Funding comes primarily through charitable donations by individuals, corporations, foundations and community service organizations in Central Florida.
         No funding is received from government agencies. New Hope for Kids is a registered 501(c)(3) organization.\n\n
         New Hope for Kids is governed by a volunteer board of directors from the Central Florida community. David C. Joswick, serves as the Executive Director.
-        He is known in the Central Florida community as an advocate of children, focusing on the difficulties associated with grief and loss.</string>
+        He is known in the Central Florida community as an advocate of children, focusing on the difficulties associated with grief and loss.\n</string>
+    <string name="sponsorLink">Take a look at our Sponsors <u><font color='#EE0000'>here!</font></u>\n</string>
 
     //CENTER FOR GRIEVING CHILDREN INFO\\
     <string name="cFGKMissionStatementLabel">Our Mission</string>
