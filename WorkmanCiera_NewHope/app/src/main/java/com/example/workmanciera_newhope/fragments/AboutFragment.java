@@ -58,6 +58,7 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
         }
     }
 
+    //opens subpages on click
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

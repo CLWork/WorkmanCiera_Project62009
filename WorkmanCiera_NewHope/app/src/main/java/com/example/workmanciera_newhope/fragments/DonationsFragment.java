@@ -47,6 +47,7 @@ public class DonationsFragment extends Fragment implements View.OnClickListener 
         targetBttn.setOnClickListener(this);
     }
 
+    //Opens specific webpage in browser depending on which button is pressed.
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();

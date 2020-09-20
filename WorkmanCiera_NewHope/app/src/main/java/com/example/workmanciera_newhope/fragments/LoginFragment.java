@@ -26,6 +26,7 @@ import androidx.fragment.app.Fragment;
 import com.example.workmanciera_newhope.R;
 import com.example.workmanciera_newhope.helpers.FragmentListener;
 import com.example.workmanciera_newhope.helpers.Utility;
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -33,9 +34,13 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Objects;
 
@@ -96,13 +101,14 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
         //Facebook button
         fbLoginBttn = (LoginButton) getActivity().findViewById(R.id.fbLoginBttn);
-        fbLoginBttn.setPermissions(Collections.singletonList(EMAIL));
+        fbLoginBttn.setPermissions(Arrays.asList("email", "public_profile"));
         fbLoginBttn.setFragment(this);
         fbLoginBttn.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Toast.makeText(getContext(), "Facebook Login Success!", Toast.LENGTH_SHORT).show();
-                mListener.openHome();
+
+                handleFacebookAccessToken(loginResult.getAccessToken());
             }
 
             @Override
@@ -191,5 +197,29 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             }
         });
     }
+
+    private void handleFacebookAccessToken(AccessToken token) {
+        Log.d(TAG, "handleFacebookAccessToken:" + token);
+        final FirebaseAuth mAuth = mListener.getAuth();
+        AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(Objects.requireNonNull(getActivity()), new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+
+                            Log.d(TAG, "signInWithCredential:success");
+                            mListener.openHome();
+
+                        } else {
+
+                            Log.w(TAG, "signInWithCredential:failure", task.getException());
+                            Toast.makeText(getContext(), "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+
 
 }
