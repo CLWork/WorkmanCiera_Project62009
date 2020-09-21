@@ -1,3 +1,8 @@
+//Ciera Workman
+//Project 6 2009
+//AboutWFKFragment.java
+
+
 package com.example.workmanciera_newhope.fragments;
 
 import android.os.Bundle;

@@ -1,3 +1,8 @@
+
+//Ciera Workman
+//Project 6 2009
+//DonationsFragment.java
+
 package com.example.workmanciera_newhope.fragments;
 
 import android.content.Intent;
@@ -13,6 +18,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.workmanciera_newhope.R;
+
+import java.util.Objects;
 
 public class DonationsFragment extends Fragment implements View.OnClickListener {
 
@@ -79,7 +86,7 @@ public class DonationsFragment extends Fragment implements View.OnClickListener 
         }
 
         //makes sure there is an app to open intent
-        if(intent.resolveActivity(getActivity().getPackageManager()) != null) {
+        if(intent.resolveActivity(Objects.requireNonNull(getActivity()).getPackageManager()) != null) {
             startActivity(intent);
         }
     }

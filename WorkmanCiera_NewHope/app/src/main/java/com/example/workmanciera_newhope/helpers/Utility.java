@@ -19,8 +19,13 @@ import androidx.annotation.RequiresApi;
 
 import com.example.workmanciera_newhope.R;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class Utility {
 

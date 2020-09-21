@@ -38,19 +38,16 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Objects;
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
     public static final String TAG = "LoginFrag.Tag";
     private static final String EMAIL = "email";
-    private boolean loginTapped = false;
+    private static final String PROFILE = "public_profile";
     private Context mContext;
-    private LoginButton fbLoginBttn;
     private CallbackManager callbackManager;
     private FragmentListener mListener;
     FirebaseAuth auth;
@@ -100,8 +97,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         registerBttn.setOnClickListener(this);
 
         //Facebook button
-        fbLoginBttn = (LoginButton) getActivity().findViewById(R.id.fbLoginBttn);
-        fbLoginBttn.setPermissions(Arrays.asList("email", "public_profile"));
+        LoginButton fbLoginBttn = (LoginButton) getActivity().findViewById(R.id.fbLoginBttn);
+        fbLoginBttn.setPermissions(Arrays.asList(EMAIL, PROFILE));
         fbLoginBttn.setFragment(this);
         fbLoginBttn.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override

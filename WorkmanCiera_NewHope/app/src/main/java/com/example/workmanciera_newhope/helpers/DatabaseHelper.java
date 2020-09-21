@@ -1,3 +1,8 @@
+//Ciera Workman
+//Project 6 2009
+//DatabaseHelper.java
+
+
 package com.example.workmanciera_newhope.helpers;
 
 import android.util.Log;
@@ -30,6 +35,8 @@ public class DatabaseHelper {
 
                     assert spon != null;
                     sponsorFromDB.add(spon);
+
+                    Log.e("HELPER", "" + sponsorFromDB.size());
                 }
             }
 

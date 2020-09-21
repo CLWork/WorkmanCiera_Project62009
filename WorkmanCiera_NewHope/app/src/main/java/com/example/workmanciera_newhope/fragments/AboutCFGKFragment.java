@@ -1,12 +1,11 @@
+//Ciera Workman
+//Project 6 2009
+//AboutCFGKFragment.java
+
 package com.example.workmanciera_newhope.fragments;
 
-import android.graphics.Color;
-import android.opengl.Matrix;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.BulletSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

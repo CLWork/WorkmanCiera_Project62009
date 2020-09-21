@@ -1,3 +1,8 @@
+//Ciera Workman
+//Project 6 2009
+//RegisterFragment.java
+
+
 package com.example.workmanciera_newhope.fragments;
 
 import android.app.Activity;
@@ -106,7 +111,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         String unit = unitET.getText().toString();
         String zipcode = zipcodeET.getText().toString();
 
-        String fullAddress = "";
+        String fullAddress;
 
         if (!Utility.isPasswordStrongEnough(password)) {
 
@@ -210,14 +215,12 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
 
     //puts together list of states
     private ArrayList<String> makeStateList() {
-        ArrayList<String> states = new ArrayList<>();
         String[] stateArray = {"AL", "AK", "AZ", "AR", "CA", "CO", "CT",
                 "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA",
                 "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH",
                 "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA",
                 "WV", "WI", "WY"};
-        states.addAll(Arrays.asList(stateArray));
-        return states;
+        return new ArrayList<>(Arrays.asList(stateArray));
     }
 
 

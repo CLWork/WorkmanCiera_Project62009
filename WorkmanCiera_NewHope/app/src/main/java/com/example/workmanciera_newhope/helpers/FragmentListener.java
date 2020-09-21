@@ -1,4 +1,11 @@
+//Ciera Workman
+//Project 6 2009
+//FragmentListener.java
+
+
 package com.example.workmanciera_newhope.helpers;
+
+import android.graphics.Bitmap;
 
 import com.google.firebase.auth.FirebaseAuth;
 

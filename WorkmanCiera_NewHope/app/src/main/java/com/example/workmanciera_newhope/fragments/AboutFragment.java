@@ -1,3 +1,6 @@
+//Ciera Workman
+//Project 6 2009
+//AboutFragment.java
 package com.example.workmanciera_newhope.fragments;
 
 import android.content.Context;
@@ -45,8 +48,10 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
 
         TextView centerTV = getActivity().findViewById(R.id.cFGKLinkHeader);
         TextView wishTV = getActivity().findViewById(R.id.wFkLinkHeader);
+        TextView viewSponsorsTV = getActivity().findViewById(R.id.sponsorNameTV);
         centerTV.setOnClickListener(this);
         wishTV.setOnClickListener(this);
+        viewSponsorsTV.setOnClickListener(this);
 
     }
 

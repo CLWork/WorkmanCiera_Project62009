@@ -1,8 +1,13 @@
+//Ciera Workman
+//Project 6 2009
+//Users.java
+
+
 package com.example.workmanciera_newhope.helpers;
 
 public class Users {
-    String fullName;
-    String email;
+    final String fullName;
+    final String email;
     String address;
 
     public Users(String fullName, String email) {
