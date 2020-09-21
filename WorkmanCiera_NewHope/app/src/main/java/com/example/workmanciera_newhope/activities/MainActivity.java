@@ -54,18 +54,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigation.setOnNavigationItemSelectedListener(this);
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        
+
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
 
         //user is still logged in, open home page.
-        if(currentUser != null){
-            openHome();
-        } else{
-            //user is not logged in, open login.
-            openLogin();
-         }
+//        if(currentUser != null){
+//            openHome();
+//        } else{
+//            //user is not logged in, open login.
+//            openLogin();
+//         }
+
+        openHome();
 
     }
 

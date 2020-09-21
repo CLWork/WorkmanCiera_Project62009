@@ -5,6 +5,7 @@ package com.example.workmanciera_newhope.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,10 +49,12 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
 
         TextView centerTV = getActivity().findViewById(R.id.cFGKLinkHeader);
         TextView wishTV = getActivity().findViewById(R.id.wFkLinkHeader);
-        TextView viewSponsorsTV = getActivity().findViewById(R.id.sponsorNameTV);
-        centerTV.setOnClickListener(this);
-        wishTV.setOnClickListener(this);
-        viewSponsorsTV.setOnClickListener(this);
+        TextView viewSponsorsTV = getActivity().findViewById(R.id.sponsorTV);
+
+            centerTV.setOnClickListener(this);
+            wishTV.setOnClickListener(this);
+            viewSponsorsTV.setOnClickListener(this);
+
 
     }
 
