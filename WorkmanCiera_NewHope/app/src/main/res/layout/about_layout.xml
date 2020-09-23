@@ -5,16 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:baselineAligned="false"
-    android:paddingTop="8dp"
-    android:paddingEnd="8dp"
-    android:paddingStart="8dp">
+    android:background="@color/bgColor">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="160dp"
-        android:background="@android:color/white"
         android:contentDescription="@string/contentDesc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +20,9 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,8 +70,9 @@
                 android:text="@string/fundingAbout" />
 
             <TextView
-                android:id="@+id/sponsorTV"
+                android:id="@+id/linkToSponsorsTV"
                 style="@style/bodyTextStyle"
+                android:layout_marginTop="8dp"
                 android:text="@string/sponsorLink" />
 
         </LinearLayout>

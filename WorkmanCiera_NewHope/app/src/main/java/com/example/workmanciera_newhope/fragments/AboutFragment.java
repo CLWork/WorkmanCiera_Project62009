@@ -5,7 +5,6 @@ package com.example.workmanciera_newhope.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +48,7 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
 
         TextView centerTV = getActivity().findViewById(R.id.cFGKLinkHeader);
         TextView wishTV = getActivity().findViewById(R.id.wFkLinkHeader);
-        TextView viewSponsorsTV = getActivity().findViewById(R.id.sponsorTV);
+        TextView viewSponsorsTV = getActivity().findViewById(R.id.linkToSponsorsTV);
 
             centerTV.setOnClickListener(this);
             wishTV.setOnClickListener(this);
@@ -76,7 +75,7 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
             case R.id.wFkLinkHeader:
                 mListener.openWFKAbout();
                 break;
-            case R.id.sponsorTV:
+            case R.id.linkToSponsorsTV:
                 mListener.openSponsors();
                 break;
 

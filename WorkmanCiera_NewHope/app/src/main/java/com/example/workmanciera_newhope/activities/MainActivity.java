@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     }
 
-    //Pops fragments from backstack.
+    //Pops fragments from back stack.
     @Override
     public void onBackPressed() {
         super.onBackPressed();
