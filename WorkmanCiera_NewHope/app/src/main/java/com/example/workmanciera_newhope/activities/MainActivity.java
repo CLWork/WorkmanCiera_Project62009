@@ -12,6 +12,7 @@ import com.example.workmanciera_newhope.R;
 import com.example.workmanciera_newhope.fragments.AboutCFGKFragment;
 import com.example.workmanciera_newhope.fragments.AboutFragment;
 import com.example.workmanciera_newhope.fragments.AboutWFKFragment;
+import com.example.workmanciera_newhope.fragments.AddChildFragment;
 import com.example.workmanciera_newhope.fragments.DonationsFragment;
 import com.example.workmanciera_newhope.fragments.HomeFragment;
 import com.example.workmanciera_newhope.fragments.LoginFragment;
@@ -67,7 +68,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //            openLogin();
 //         }
 
-        openHome();
+        //openHome();
+        openChildrenAddPage();
 
     }
 
@@ -162,6 +164,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigation.setVisibility(View.GONE);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frameLayout, RegisterFragment.newInstance(), RegisterFragment.TAG).commit();
+    }
+
+    public void openChildrenAddPage(){
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frameLayout, AddChildFragment.newInstance(),AddChildFragment.TAG).commit();
+    }
+
+    public void openSponsorAddPage(){
+
     }
 
 

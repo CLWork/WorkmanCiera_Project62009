@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     //GENERAL APP STRINGS\\
-    <string name="app_name">WorkmanCiera_NewHope</string>
+    <string name="app_name">Holiday Drive</string>
     <string name="facebook_app_id">335583464458988</string>
     <string name="fb_login_protocol_scheme">fb335583464458988</string>
 
@@ -10,10 +10,18 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="fullName">Full Name</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="wishListURL">Wishlist URL</string>
+    <string name="wishlistButtonLabel">Wish List</string>
+    <string name="interests">Interests</string>
     <string name="next">Next</string>
+    <string name="abEdit">Edit</string>
+    <string name="abAdd">Add</string>
+    <string name="abSave">Save</string>
     <string name="addressLineOne">Address #1</string>
     <string name="unitNum">Unit/Suite</string>
-    <string name="zipcode">Zipcode</string>
+    <string name="zipcode">Postal Code</string>
     <string name="contentDesc">An image of the New Hope for Kids logo.</string>
     <string name="homeContentDesc">An image of santa\'s sack with holiday drive description.</string>
     <string name="sponsorContentDesc">Image of sponsor logos.</string>
@@ -24,7 +32,12 @@
     <string name="newHopeBttn">New Hope Website</string>
     <string name="donateToNewHope">Donate To New Hope</string>
     <string name="fillBagHeader">Fill Santa\'s Bag of Hope!</string>
-    <string name="santaBagContentDesc">A red bag full of gifts.</string>
+    <string name="santaBagContentDesc">Santa\'s red bag full of gifts.</string>
+    <string name="addChildLabel">Add a Child to Support</string>
+    <string name="addSponsorLabel">Add a New Sponsor</string>
+    <string name="sponsorDesc">Sponsor Description</string>
+    <string name="websiteURL">Website URL</string>
+    <string name="sponsorImgURL">Image URL</string>
 
     <string name="passwordReqs">1 Upper Case Letter, 1 Lower case Letter,
         1 Symbol (@#$%^&amp;+=), at least 6 characters long and no Spaces</string>
